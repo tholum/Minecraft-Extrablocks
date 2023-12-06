@@ -1,0 +1,26 @@
+{
+  "type" : "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item" : "minecraft:green_concrete"
+    },
+    {
+      "item" : "minecraft:sand"
+    },
+    {
+      "item" : "minecraft:sand"
+    },
+    {
+      "item" : "minecraft:sand"
+    },
+    {
+      "item" : "minecraft:sand"
+    }
+
+  ],
+  "result" : {
+    "item" : "extrablocks:green_stucco",
+    "count": 5
+  }
+}

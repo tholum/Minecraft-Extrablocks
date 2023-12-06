@@ -1,0 +1,23 @@
+{
+  "type" : "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item" : "minecraft:andesite"
+    },
+    {
+      "item" : "minecraft:granite"
+    },
+    {
+      "item" : "minecraft:dripstone_block"
+    },
+    {
+      "item" : "minecraft:cobblestone"
+    }
+
+  ],
+  "result" : {
+    "item" : "extrablocks:path_stone",
+    "count": 4
+  }
+}

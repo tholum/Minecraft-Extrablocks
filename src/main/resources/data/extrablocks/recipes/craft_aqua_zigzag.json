@@ -1,0 +1,17 @@
+{
+  "type" : "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item" : "minecraft:cyan_concrete"
+    },
+    {
+      "item" : "minecraft:light_blue_concrete"
+    }
+
+  ],
+  "result" : {
+    "item" : "extrablocks:aqua_zigzag",
+    "count": 2
+  }
+}
