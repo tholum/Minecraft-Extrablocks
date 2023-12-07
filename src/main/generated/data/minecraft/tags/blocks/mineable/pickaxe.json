@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "extrablocks:aqua_zigzag",
+    "extrablocks:green_stucco",
+    "extrablocks:pink_forest_floor",
+    "extrablocks:pale_stucco",
+    "extrablocks:path_stone"
+  ]
+}
