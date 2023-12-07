@@ -6,7 +6,6 @@ out/
 classes/
 caches/
 daemon
-
 # eclipse
 
 *.launch
