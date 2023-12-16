@@ -21,5 +21,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINK_FOREST_FLOOR)
                 .add(ModBlocks.PALE_STUCCO)
                 .add(ModBlocks.PATH_STONE);
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(ModBlocks.GOLDEN_BIRCH_PLANKS)
+                .add(ModBlocks.GOLDEN_BIRCH );
+        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
+                .add(ModBlocks.GOLDEN_BIRCH_LEAVES)
+                .add(ModBlocks.GREEN_SHROOMLIGHT)
+                /* .add(ModBlocks.YELLOW_GLAZED_TERRACATA ) */;
+
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ModBlocks.GOLD_WALL)
+                .add(ModBlocks.SHROOMLIGHT_WALL)
+                .add(ModBlocks.NETHER_WART_WALL)
+                .add(ModBlocks.REDSTONE_WALL)
+                .add(ModBlocks.GOLD_TILE_WALL);
     }
 }

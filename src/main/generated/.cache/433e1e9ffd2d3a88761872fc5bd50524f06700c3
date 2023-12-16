@@ -1,0 +1,5 @@
+// 1.20.2	2023-12-15T20:28:32.866562	ExtraBlocks/Tags for minecraft:block
+493b7480843217ac9084a8fba0baf932ef0316bd data/minecraft/tags/blocks/mineable/hoe.json
+6dc09ada62b1cace100c961fec6542b72a52650d data/minecraft/tags/blocks/mineable/axe.json
+eb0a8101a1a161c864203928c2a32bc93e794c56 data/minecraft/tags/blocks/mineable/pickaxe.json
+665cc23d178370c64a091a28932fe0e488137031 data/minecraft/tags/blocks/walls.json

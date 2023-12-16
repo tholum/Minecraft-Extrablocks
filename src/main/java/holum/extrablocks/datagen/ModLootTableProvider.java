@@ -1,5 +1,6 @@
 package holum.extrablocks.datagen;
 
+import holum.extrablocks.Block.BlockBuilder;
 import holum.extrablocks.Block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
@@ -11,10 +12,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.AQUA_ZIGZAG);
-        addDrop(ModBlocks.GREEN_STUCCO);
-        addDrop(ModBlocks.PALE_STUCCO);
-        addDrop(ModBlocks.PATH_STONE);
-        addDrop(ModBlocks.PINK_FOREST_FLOOR);
+        for (int i = 0; i < BlockBuilder.blockBuilders.size(); i++){
+            BlockBuilder block = BlockBuilder.blockBuilders.get(i);
+            if( block.droppable){
+                addDrop(block.get());
+            }
+        }
     }
 }

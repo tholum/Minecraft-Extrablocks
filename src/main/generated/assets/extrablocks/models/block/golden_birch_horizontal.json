@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "extrablocks:block/golden_birch_top",
+    "side": "extrablocks:block/golden_birch"
+  }
+}

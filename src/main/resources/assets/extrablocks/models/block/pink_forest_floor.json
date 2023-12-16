@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all" : "extrablocks:block/pink_forest_floor"
-  }
-}
