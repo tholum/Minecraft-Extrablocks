@@ -1,10 +1,13 @@
 package holum.extrablocks.datagen;
 
+import holum.extrablocks.Block.BlockBuilder;
 import holum.extrablocks.Block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -15,22 +18,20 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ModBlocks.AQUA_ZIGZAG)
-                .add(ModBlocks.GREEN_STUCCO)
-                .add(ModBlocks.PINK_FOREST_FLOOR)
-                .add(ModBlocks.PALE_STUCCO)
-                .add(ModBlocks.PATH_STONE);
-        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
-                .add(ModBlocks.GOLDEN_BIRCH_PLANKS)
-                .add(ModBlocks.GOLDEN_BIRCH );
-        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
-                .add(ModBlocks.GOLDEN_BIRCH_LEAVES)
-                .add(ModBlocks.GREEN_SHROOMLIGHT)
-                /* .add(ModBlocks.YELLOW_GLAZED_TERRACATA ) */;
+
+        for (int i = 0; i < BlockBuilder.blockBuilders.size(); i++){
+            BlockBuilder block = BlockBuilder.blockBuilders.get(i);
+             for (int x = 0; x < block.blockTags.size(); x++){
+                TagKey<Block> tag = block.blockTags.get( x );
+                getOrCreateTagBuilder(tag).add( block.get() );
+             }
+             if( block.registerWall){
+                getOrCreateTagBuilder(BlockTags.WALLS).add(block.getWall());        
+             }
+        }
 
         getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(ModBlocks.GOLD_WALL)
+                /* .add(ModBlocks.GOLD_WALL) */
                 .add(ModBlocks.SHROOMLIGHT_WALL)
                 .add(ModBlocks.NETHER_WART_WALL)
                 .add(ModBlocks.REDSTONE_WALL)

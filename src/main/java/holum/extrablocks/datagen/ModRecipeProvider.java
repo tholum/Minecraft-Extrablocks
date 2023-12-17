@@ -42,10 +42,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         bb.recipes.get(x).shapelessIngredients
                 );
             }
+            if( bb.registerWall){
+                offerWallRecipe(exporter , RecipeCategory.BUILDING_BLOCKS , bb.getWall() , bb.get() );
+            }
         }
         offerStonecuttingRecipe( exporter , RecipeCategory.BUILDING_BLOCKS , ModBlocks.GOLD_TILE , Blocks.GOLD_BLOCK );
         offerWallRecipe(exporter , RecipeCategory.BUILDING_BLOCKS , ModBlocks.SHROOMLIGHT_WALL , Blocks.SHROOMLIGHT );
-        offerWallRecipe(exporter,RecipeCategory.BUILDING_BLOCKS,  ModBlocks.GOLD_WALL , Blocks.GOLD_BLOCK);
+        /* offerWallRecipe(exporter,RecipeCategory.BUILDING_BLOCKS,  ModBlocks.GOLD_WALL , Blocks.GOLD_BLOCK); */
+
         offerWallRecipe(exporter,RecipeCategory.BUILDING_BLOCKS,  ModBlocks.NETHER_WART_WALL , Blocks.NETHER_WART_BLOCK);
         offerWallRecipe(exporter,RecipeCategory.BUILDING_BLOCKS,  ModBlocks.REDSTONE_WALL , Blocks.REDSTONE_BLOCK);
         offerWallRecipe(exporter,RecipeCategory.BUILDING_BLOCKS,  ModBlocks.GOLD_TILE_WALL , ModBlocks.GOLD_TILE);

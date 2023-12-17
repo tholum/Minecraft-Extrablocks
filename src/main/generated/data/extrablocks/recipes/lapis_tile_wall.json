@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "minecraft:gold_block"
+      "item": "extrablocks:lapis_tile"
     }
   },
   "pattern": [
@@ -12,7 +12,7 @@
   ],
   "result": {
     "count": 6,
-    "item": "extrablocks:gold_wall"
+    "item": "extrablocks:lapis_tile_wall"
   },
   "show_notification": true
 }

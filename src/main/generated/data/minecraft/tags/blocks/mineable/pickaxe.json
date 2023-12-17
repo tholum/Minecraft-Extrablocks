@@ -1,10 +1,20 @@
 {
   "replace": false,
   "values": [
-    "extrablocks:aqua_zigzag",
+    "extrablocks:golden_birch_planks",
+    "extrablocks:green_shroomlight",
+    "extrablocks:golden_birch_leaves",
+    "minecraft:gold_block",
+    "extrablocks:gold_tile_wall",
+    "extrablocks:gold_tile",
+    "extrablocks:shroomlight_wall",
+    "extrablocks:redstone_wall",
+    "extrablocks:nether_wart_wall",
     "extrablocks:green_stucco",
     "extrablocks:pink_forest_floor",
+    "extrablocks:aqua_zigzag",
     "extrablocks:pale_stucco",
-    "extrablocks:path_stone"
+    "extrablocks:path_stone",
+    "extrablocks:lapis_tile"
   ]
 }

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "extrablocks:gold_wall"
+          "name": "minecraft:gold_block"
         }
       ],
       "rolls": 1.0

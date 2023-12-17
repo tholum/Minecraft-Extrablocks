@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "extrablocks:gold_wall"
+        "recipe": "extrablocks:gold_block_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "extrablocks:gold_wall"
+      "extrablocks:gold_block_wall"
     ]
   },
   "sends_telemetry_event": false

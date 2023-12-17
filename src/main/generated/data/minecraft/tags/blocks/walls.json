@@ -1,7 +1,8 @@
 {
   "replace": false,
   "values": [
-    "extrablocks:gold_wall",
+    "extrablocks:gold_block_wall",
+    "extrablocks:lapis_tile_wall",
     "extrablocks:shroomlight_wall",
     "extrablocks:nether_wart_wall",
     "extrablocks:redstone_wall",

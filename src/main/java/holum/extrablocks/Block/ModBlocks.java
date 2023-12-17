@@ -11,11 +11,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
-
-import java.util.ArrayList;
 
 public class ModBlocks {
     public static final Block GOLDEN_BIRCH = registerBlock(
@@ -31,6 +26,7 @@ public class ModBlocks {
     ).addRecipe(new ItemConvertible[]{
             Items.BIRCH_PLANKS ,
             Items.GOLD_NUGGET}).get();
+
     public static final Block GREEN_SHROOMLIGHT = registerBlock(
             "green_shroomlight" ,
             Blocks.SHROOMLIGHT
@@ -43,9 +39,11 @@ public class ModBlocks {
     ).addRecipe(new ItemConvertible[]{
             Items.BIRCH_LEAVES ,
             Items.GOLD_NUGGET}).get();
-    public static final Block GOLD_WALL = registerBlock("gold_wall",
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)) , BlockBuilder.builderType.RAW)
-            .setTextureType("custom").get();
+    public static final Block GOLD_BLOCK = registerBlock("gold_block", Blocks.GOLD_BLOCK , BlockBuilder.builderType.REFERENCE)
+    .withWalls()
+    .get();
+
+
     public static final Block GOLD_TILE_WALL = registerBlock("gold_tile_wall",
             new WallBlock(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)) , BlockBuilder.builderType.RAW)
             .setTextureType("custom").get();
@@ -110,6 +108,10 @@ public class ModBlocks {
                     Items.COBBLESTONE}
         ).get();
 
+    public static final Block LAPIS_TILE = registerBlock("lapis_tile", Blocks.LAPIS_BLOCK )
+        .withWalls()
+        .get();
+
     private static BlockBuilder registerBlock(String name , Block block ){
         return new BlockBuilder(name , block );
     }
@@ -117,21 +119,11 @@ public class ModBlocks {
     private static BlockBuilder registerBlock(String name , Block block , BlockBuilder.builderType type ){
         return new BlockBuilder(name , block , type  );
     }
-
-    private static Block withRecipe( Block block ,  ModBlockRecipe mbr  ){
-        mbr.setBlock(block);
-        // modBlocks.add( mbr );
-        return block;
-    }
-    private static Item registerBlockItem( String name , Block block ){
-        return Registry.register(Registries.ITEM , new Identifier(ExtraBlocks.MOD_ID , name ) , new BlockItem( block , new FabricItemSettings()));
-    }
+    
+    
     public static void registerModBlocks(){
         ExtraBlocks.LOGGER.info("Register Modblocks");
     }
-    private static Block registerBlockOrig(String name, Block block) {
-        registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, new Identifier(ExtraBlocks.MOD_ID, name), block);
-    }
+    
 
 }
