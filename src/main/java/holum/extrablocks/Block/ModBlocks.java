@@ -11,6 +11,8 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 
 public class ModBlocks {
     public static final Block GOLDEN_BIRCH = registerBlock(
@@ -134,7 +136,9 @@ public class ModBlocks {
             Blocks.SHROOMLIGHT
     ).addRecipe(new ItemConvertible[]{
             Items.SHROOMLIGHT ,
-            die }).withWalls();
+            die })
+            .withWalls()
+            .addTag(BlockTags.HOE_MINEABLE);
     }
     
     public static void registerModBlocks(){

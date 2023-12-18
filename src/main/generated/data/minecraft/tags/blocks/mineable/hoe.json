@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "extrablocks:grey_shroomlight",
+    "extrablocks:lime_shroomlight",
+    "extrablocks:pink_shroomlight",
+    "extrablocks:black_shroomlight",
+    "extrablocks:brown_shroomlight",
+    "extrablocks:white_shroomlight",
+    "extrablocks:orange_shroomlight",
+    "extrablocks:purple_shroomlight",
+    "extrablocks:green_shroomlight",
+    "extrablocks:blue_shroomlight",
+    "extrablocks:red_shroomlight",
+    "extrablocks:cyan_shroomlight",
+    "extrablocks:yellow_shroomlight",
+    "extrablocks:magenta_shroomlight",
+    "extrablocks:light_blue_shroomlight",
+    "extrablocks:light_grey_shroomlight"
+  ]
+}
