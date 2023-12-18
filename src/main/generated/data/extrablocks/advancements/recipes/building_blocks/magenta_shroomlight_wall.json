@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_magenta_shroomlight": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extrablocks:magenta_shroomlight"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extrablocks:magenta_shroomlight_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_magenta_shroomlight"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extrablocks:magenta_shroomlight_wall"
+    ]
+  },
+  "sends_telemetry_event": false
+}

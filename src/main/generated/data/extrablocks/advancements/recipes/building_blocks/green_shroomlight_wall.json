@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_green_shroomlight": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extrablocks:green_shroomlight"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extrablocks:green_shroomlight_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_green_shroomlight"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extrablocks:green_shroomlight_wall"
+    ]
+  },
+  "sends_telemetry_event": false
+}

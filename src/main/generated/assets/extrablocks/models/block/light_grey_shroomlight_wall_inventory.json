@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "extrablocks:block/light_grey_shroomlight"
+  }
+}

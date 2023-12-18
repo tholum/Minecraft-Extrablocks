@@ -42,7 +42,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         bb.recipes.get(x).shapelessIngredients
                 );
             }
-            if( bb.registerWall){
+            if( bb.registerWall == true ){
                 offerWallRecipe(exporter , RecipeCategory.BUILDING_BLOCKS , bb.getWall() , bb.get() );
             }
         }

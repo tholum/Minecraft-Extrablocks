@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_purple_shroomlight": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extrablocks:purple_shroomlight"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extrablocks:purple_shroomlight_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_purple_shroomlight"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extrablocks:purple_shroomlight_wall"
+    ]
+  },
+  "sends_telemetry_event": false
+}

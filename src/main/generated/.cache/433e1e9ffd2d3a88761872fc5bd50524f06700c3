@@ -1,4 +1,4 @@
-// 1.20.2	2023-12-17T09:22:20.253094	ExtraBlocks/Tags for minecraft:block
+// 1.20.2	2023-12-17T20:47:39.069161	ExtraBlocks/Tags for minecraft:block
 8e1e854acbc7e4d2d3992a756697f27abcfd1eb8 data/minecraft/tags/blocks/mineable/axe.json
-dbc9efde2874eee358164b51de6efef675486fd1 data/minecraft/tags/blocks/mineable/pickaxe.json
-762a737e1ab4cccd12388baf0768dfe3778a0bb0 data/minecraft/tags/blocks/walls.json
+0ba14a5665336946d5b17d7fbed599f38c6ff069 data/minecraft/tags/blocks/mineable/pickaxe.json
+15e0bf66f64ab9d79403d2248a47430db1a71e34 data/minecraft/tags/blocks/walls.json

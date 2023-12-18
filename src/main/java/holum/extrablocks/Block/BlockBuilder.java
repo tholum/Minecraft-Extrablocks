@@ -83,6 +83,7 @@ public class BlockBuilder {
     }
 
     private Block genWall(){
+        
         return registerBlock( name + "_wall" , new WallBlock(FabricBlockSettings.copyOf( initalBlock )) ); 
     }
 
@@ -150,7 +151,9 @@ public class BlockBuilder {
         return this.blk;
     }
     public Block getWall(){
+        LOGGER.info("Getting Wall " + name + "_wall");
         if( wallInitialized == false ){
+            LOGGER.info("Wall Un Initalized " + name + "_wall");
             this.wallInitialized = true;
             this.wall = this.genWall();
         }
@@ -197,6 +200,7 @@ public class BlockBuilder {
     }
     private  void registerBlockItem(String name , Block block , String mod  ){
         LOGGER.info("Registering Item " + name);
+        
         Registry.register(Registries.ITEM , new Identifier(mod , name ) , new BlockItem( block , new FabricItemSettings()));
     }
 }

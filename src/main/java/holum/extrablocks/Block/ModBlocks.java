@@ -26,13 +26,22 @@ public class ModBlocks {
     ).addRecipe(new ItemConvertible[]{
             Items.BIRCH_PLANKS ,
             Items.GOLD_NUGGET}).get();
-
-    public static final Block GREEN_SHROOMLIGHT = registerBlock(
-            "green_shroomlight" ,
-            Blocks.SHROOMLIGHT
-    ).addRecipe(new ItemConvertible[]{
-            Items.SHROOMLIGHT ,
-            Items.GREEN_DYE }).get();
+        public static final Block GREY_SHROOMLIGHT = registerShroomlight("grey" , Items.GRAY_DYE ).get();
+        public static final Block LIME_SHROOMLIGHT = registerShroomlight("lime" , Items.LIME_DYE ).get();
+        public static final Block PINK_SHROOMLIGHT = registerShroomlight("pink" , Items.PINK_DYE ).get();
+        public static final Block BLACK_SHROOMLIGHT = registerShroomlight("black" , Items.BLACK_DYE ).get();
+        public static final Block BROWN_SHROOMLIGHT = registerShroomlight("brown" , Items.BROWN_DYE ).get();
+        public static final Block WHITE_SHROOMLIGHT = registerShroomlight("white" , Items.WHITE_DYE ).get();
+        public static final Block ORANGE_SHROOMLIGHT = registerShroomlight("orange" , Items.ORANGE_DYE ).get();
+        public static final Block PURPLE_SHROOMLIGHT = registerShroomlight("purple" , Items.PURPLE_DYE ).get();
+        public static final Block GREEN_SHROOMLIGHT = registerShroomlight("green" , Items.GREEN_DYE ).get();
+        public static final Block BLUE_SHROOMLIGHT = registerShroomlight("blue" , Items.BLUE_DYE ).get();
+        public static final Block RED_SHROOMLIGHT = registerShroomlight("red" , Items.RED_DYE ).get();
+        public static final Block CYAN_SHROOMLIGHT = registerShroomlight("cyan" , Items.CYAN_DYE ).get();
+        public static final Block YELLOW_SHROOMLIGHT = registerShroomlight("yellow" , Items.YELLOW_DYE ).get();
+        public static final Block MAGENTA_SHROOMLIGHT = registerShroomlight("magenta" , Items.MAGENTA_DYE ).get();
+        public static final Block LIGHT_BLUE_SHROOMLIGHT = registerShroomlight("light_blue" , Items.LIGHT_BLUE_DYE ).get();
+        public static final Block LIGHT_GREY_SHROOMLIGHT = registerShroomlight("light_grey" , Items.LIGHT_GRAY_DYE ).get();
     public static final Block GOLDEN_BIRCH_LEAVES = registerBlock(
             "golden_birch_leaves" ,
             Blocks.BIRCH_PLANKS
@@ -119,7 +128,14 @@ public class ModBlocks {
     private static BlockBuilder registerBlock(String name , Block block , BlockBuilder.builderType type ){
         return new BlockBuilder(name , block , type  );
     }
-    
+    private static BlockBuilder registerShroomlight( String color , ItemConvertible die ){
+        return registerBlock(
+            color + "_shroomlight" ,
+            Blocks.SHROOMLIGHT
+    ).addRecipe(new ItemConvertible[]{
+            Items.SHROOMLIGHT ,
+            die }).withWalls();
+    }
     
     public static void registerModBlocks(){
         ExtraBlocks.LOGGER.info("Register Modblocks");
